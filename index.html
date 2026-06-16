@@ -8,19 +8,16 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- FontAwesome Pro Visual Kit -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- External Dynamic Style link -->
+    <!-- Custom Separated Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-900">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-900 overflow-x-hidden">
 
-    <!-- 
-      GLOBAL NAVIGATION LAYER
-      Features backdrop blur glassmorphism and a responsive sticky design configuration.
-    -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800/80">
+    <!-- GLOBAL NAVIGATION LAYER WITH FROSTED GLASS EFFECT -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-24">
-                <!-- Brand Trademark Matrix Identification -->
+                <!-- Logo Trademark Identification Matrix -->
                 <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="navigateTo('home')">
                     <div class="h-12 w-12 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center text-2xl font-black text-white shadow-lg shadow-cyan-500/30">
                         I
@@ -41,7 +38,7 @@
                     </button>
                 </div>
 
-                <!-- Responsive Mobile Hamburger Command Activation Unit -->
+                <!-- Responsive Mobile Hamburger Activation Trigger -->
                 <div class="md:hidden">
                     <button id="menu-btn" class="text-slate-400 hover:text-white focus:outline-none p-2 cursor-pointer" aria-label="Toggle Navigation Drawer">
                         <i class="fa-solid fa-bars text-2xl transition-transform duration-300"></i>
@@ -50,7 +47,7 @@
             </div>
         </div>
 
-        <!-- Mobile Drawer Menu Layout Mapping -->
+        <!-- Mobile Menu Drawer Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden absolute top-24 left-0 w-full bg-slate-900 border-b border-slate-800 px-6 py-8 space-y-5 shadow-2xl transform origin-top scale-y-0 transition-transform duration-300">
             <button onclick="navigateTo('home')" class="block w-full text-left py-2 text-lg text-slate-300 hover:text-cyan-400 font-medium">Core Portal (Home)</button>
             <button onclick="navigateTo('about')" class="block w-full text-left py-2 text-lg text-slate-300 hover:text-cyan-400 font-medium">About Architecture</button>
@@ -63,7 +60,7 @@
         </div>
     </nav>
 
-    <!-- MAIN VIEWPORT DISPLAY FIELD -->
+    <!-- MAIN VIEWPORT ELEMENT CONTAINER -->
     <main class="pt-24 min-h-screen">
 
         <!-- ================================================================= -->
@@ -71,18 +68,18 @@
         <!-- ================================================================= -->
         <section id="home" class="page-section active">
             
-            <!-- SUB-SECTION 1: Advanced Cinematic Hero Deck -->
+            <!-- SUB-SECTION 1: Advanced Hero Deck Component -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 grid lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold tracking-widest uppercase">
-                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span> Enterprise Scale Framework Deployments
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold tracking-widest uppercase animate-pulse">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Now Accepting Next-Gen Digital Contracts
                     </div>
                     <h1 class="text-4xl sm:text-7xl font-black tracking-tight leading-none text-white">
                         Engineering <br>
                         <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent">The Invincible.</span>
                     </h1>
                     <p class="text-base sm:text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        We build robust web infrastructures and high-availability digital architectures engineered to survive extreme data loads with flawless telemetry execution.
+                        We deploy highly sophisticated web software systems and architecture designed to run flawlessly under immense stress parameters.
                     </p>
                     <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
                         <button onclick="navigateTo('portfolio')" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 font-bold text-xs tracking-widest uppercase shadow-xl shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer">
@@ -94,11 +91,11 @@
                     </div>
                 </div>
                 
-                <!-- Hero Visual Code Console Mockup -->
+                <!-- Code Matrix Graphics Board Window -->
                 <div class="lg:col-span-5 relative flex justify-center items-center">
                     <div class="absolute w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
                     <div class="relative w-full max-w-md p-6 sm:p-8 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-2xl backdrop-blur-md font-mono text-xs text-cyan-400">
-                        <div class="flex justify-between items-center mb-6 border-b border-slate-800/80 pb-4">
+                        <div class="flex justify-between items-center mb-6 border-b border-slate-800 pb-4">
                             <div class="flex space-x-2">
                                 <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
                                 <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
@@ -112,15 +109,15 @@
                         <p class="pl-4">motto: <span class="text-amber-300">"Engineering the Invincible"</span>,</p>
                         <p class="pl-4">faultTolerance: <span class="text-emerald-400">100%</span>,</p>
                         <p class="pl-4">concurrency: <span class="text-emerald-400">Infinity</span></p>
-                        <p class class="mt-1">});</p>
-                        <p class="mt-4 text-slate-500">// Status output verification log:</p>
+                        <p class="mt-1">});</p>
+                        <p class="mt-4 text-slate-500">// Status output checking validation</p>
                         <p class="text-emerald-400"><i class="fa-solid fa-circle-check text-[10px] mr-1"></i> Core operational deployment: ONLINE</p>
                     </div>
                 </div>
             </div>
 
-            <!-- SUB-SECTION 2: Infinite Scrolling Enterprise Trusted Logo Loop -->
-            <div class="bg-slate-900/40 border-y border-slate-900 py-10 overflow-hidden">
+            <!-- SUB-SECTION 2: Ecosystem Marquee Ticker Block -->
+            <div class="bg-slate-900/40 border-y border-slate-900/80 py-10 overflow-hidden">
                 <div class="max-w-7xl mx-auto px-4 mb-4">
                     <p class="text-center text-[10px] font-bold tracking-widest text-slate-600 uppercase">Trusted inside modern technical ecosystem stacks</p>
                 </div>
@@ -134,19 +131,53 @@
                 </div>
             </div>
 
-            <!-- SUB-SECTION 3: Dynamic Shuffling Feature Gallery Loop -->
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <!-- NEW SUB-SECTION 3: Core Design Value System Pillars (SCROLL REVEAL ACTIVATED) -->
+            <div class="scroll-reveal max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <h2 class="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-2">Operational Directives</h2>
+                    <p class="text-3xl sm:text-5xl font-black text-white tracking-tight">Our Core Design Principles</p>
+                    <div class="w-16 h-1 bg-cyan-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-850 space-y-4 hover:border-cyan-500/30 transition-all">
+                        <div class="h-12 w-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20 text-lg shadow-sm">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">Uncompromising Speed</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                            Every computational layer is stripped down to optimize asset loads, resulting in sub-millisecond network speeds on globally decentralized layouts.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-850 space-y-4 hover:border-blue-500/30 transition-all">
+                        <div class="h-12 w-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 border border-blue-500/20 text-lg shadow-sm">
+                            <i class="fa-solid fa-fingerprint"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">Flawless Security</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                            We design logic structures with end-to-end mathematical data encryption matrices, neutralizing systemic vectors before threats initialize.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-850 space-y-4 hover:border-purple-500/30 transition-all">
+                        <div class="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 border border-purple-500/20 text-lg shadow-sm">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">Infinite Scalability</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                            Infrastructure configurations engineered using stateless code principles, allowing sudden bursts of data traffic to balance effortlessly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUB-SECTION 4: Continuous Gallery Image Shuffle Array (SCROLL REVEAL ACTIVATED) -->
+            <div class="scroll-reveal max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <h2 class="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-2">Visual Telemetry</h2>
                     <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">The Lab Production Gallery</p>
-                    <p class="text-slate-400 text-sm mt-3">An active stream of operational nodes, UI interfaces, and design logic frameworks currently passing code review loops.</p>
+                    <p class="text-slate-400 text-sm mt-3">An active matrix preview stream of code systems and infrastructure layers currently running telemetry updates.</p>
                     <div class="w-12 h-1 bg-cyan-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
-                <!-- 
-                  Auto-Shuffling Loop Gallery Interface
-                  The script injects placeholder cards automatically if real URLs aren't mounted.
-                -->
                 <div id="shuffling-gallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <!-- Gallery Item 1 -->
                     <div class="gallery-card relative h-48 sm:h-64 rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group shadow-md">
@@ -183,8 +214,41 @@
                 </div>
             </div>
 
-            <!-- SUB-SECTION 4: Professional Endorsement / Testimonial Stack -->
-            <div class="bg-slate-900/30 border-t border-slate-900 py-24">
+            <!-- NEW SUB-SECTION 5: Systemic Project Framework Blueprint Steps (SCROLL REVEAL ACTIVATED) -->
+            <div class="scroll-reveal bg-slate-900/20 border-t border-slate-900 py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-20">
+                        <h2 class="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-2">Execution Protocol</h2>
+                        <p class="text-3xl sm:text-5xl font-black text-white tracking-tight">How We Build Systems</p>
+                        <div class="w-16 h-1 bg-cyan-500 mx-auto mt-4 rounded-full"></div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                        <div class="space-y-3 relative">
+                            <div class="text-4xl font-black font-mono text-slate-800">01</div>
+                            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Structural Scoping</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Deconstructing requirements arrays into pure raw code objectives to form zero-overhead development metrics.</p>
+                        </div>
+                        <div class="space-y-3 relative">
+                            <div class="text-4xl font-black font-mono text-slate-800">02</div>
+                            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Logic Engineering</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Assembling state logic and schema layout interfaces built using type-safe programming principles.</p>
+                        </div>
+                        <div class="space-y-3 relative">
+                            <div class="text-4xl font-black font-mono text-slate-800">03</div>
+                            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Telemetry Auditing</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Running load testing simulations to trace latency leaks under high data transaction rates.</p>
+                        </div>
+                        <div class="space-y-3 relative">
+                            <div class="text-4xl font-black font-mono text-slate-800">04</div>
+                            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Global Scaling</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Deploying containerized node networks over content delivery networks for sub-millisecond responses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUB-SECTION 6: Professional Corporate Testimonial Deck (SCROLL REVEAL ACTIVATED) -->
+            <div class="scroll-reveal bg-slate-900/40 border-t border-slate-900/60 py-24">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center max-w-3xl mx-auto mb-16">
                         <h2 class="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-2">Peer Recommendations</h2>
@@ -193,9 +257,8 @@
                     </div>
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Recommendation Card 1 -->
-                        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
-                            <p class="text-sm text-slate-400 leading-relaxed italic">
+                        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-cyan-500/20 transition-all shadow-md">
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed italic">
                                 "Invictus Engineering completely refactored our transactional database pathways. Code quality is absolutely bulletproof under heavy high-concurrency loops."
                             </p>
                             <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-800/60">
@@ -206,9 +269,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Recommendation Card 2 -->
-                        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
-                            <p class="text-sm text-slate-400 leading-relaxed italic">
+                        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-blue-500/20 transition-all shadow-md">
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed italic">
                                 "Their execution strategy matches the motto. They built a dashboard interface that manages global deployment pipelines seamlessly without a single point of failure."
                             </p>
                             <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-800/60">
@@ -219,9 +281,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Recommendation Card 3 -->
-                        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
-                            <p class="text-sm text-slate-400 leading-relaxed italic">
+                        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-purple-500/20 transition-all shadow-md">
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed italic">
                                 "Uncompromising commitment to system stability. Working with this engineer felt less like a basic project delivery and more like premium structural physics architecture."
                             </p>
                             <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-800/60">
@@ -249,18 +310,18 @@
                     <div class="w-12 h-1 bg-cyan-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
-                <!-- Founder Overview Metric Core Grid -->
+                <!-- Founder Overview Metrics Deck Rows Layout -->
                 <div class="grid lg:grid-cols-12 gap-12 items-center mb-24">
                     <div class="lg:col-span-5 flex justify-center">
                         <div class="relative group">
                             <div class="absolute -inset-2 bg-gradient-to-r from-cyan-500 to-indigo-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                             <div class="relative w-64 h-80 sm:w-80 sm:h-100 rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden flex items-center justify-center shadow-2xl">
-                                <!-- FOUNDER IMAGE INPUT NODE: Modify target address string link values directly below -->
+                                <!-- FOUNDER IMAGE INPUT NODE -->
                                 <img src="YOUR_IMAGE_URL_HERE" alt="Founder Portrait" onerror="this.style.display='none'; document.getElementById('founder-avatar-placeholder').style.display='flex';" class="w-full h-full object-cover">
                                 <div id="founder-avatar-placeholder" class="absolute inset-0 flex flex-col items-center justify-center bg-slate-900 text-slate-500 p-6 text-center">
-                                    <i class="fa-solid fa-user-astronaut text-6xl text-cyan-500 mb-4 animate-pulse"></i>
+                                    <i class="fa-solid fa-user-astronaut text-6xl text-cyan-500 mb-4 animate-bounce"></i>
                                     <span class="text-xs text-slate-400 font-mono tracking-wider">FOUNDER_PORTRAIT.RAW</span>
-                                    <p class="text-[10px] text-slate-600 mt-2">Replace 'YOUR_IMAGE_URL_HERE' string field element value on line 185.</p>
+                                    <p class="text-[10px] text-slate-600 mt-2">Replace 'YOUR_IMAGE_URL_HERE' string field element value on line 224.</p>
                                 </div>
                             </div>
                         </div>
@@ -293,22 +354,30 @@
                     </div>
                 </div>
 
-                <!-- Strategic Capabilities Framework Deck Row Expansion -->
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-8 border-t border-slate-900">
-                    <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-850 space-y-3">
-                        <i class="fa-solid fa-server text-cyan-400 text-xl"></i>
-                        <h4 class="text-sm font-bold text-white uppercase tracking-wider">Cloud Optimization</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">System refactoring metrics tailored to optimize resource consumption layers inside enterprise environments safely.</p>
+                <!-- NEW SUB-SECTION: Fully Expanded Enterprise Tactical Stack Grid (SCROLL REVEAL ACTIVATED) -->
+                <div class="scroll-reveal space-y-12 pt-16 border-t border-slate-900">
+                    <div class="max-w-3xl">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white uppercase tracking-wider">The Strategic Armory</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed">
+                            Our active technical configuration choices reflect modern cloud architecture development lines, minimizing code layout redundancy.
+                        </p>
                     </div>
-                    <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-850 space-y-3">
-                        <i class="fa-solid fa-code-fork text-blue-400 text-xl"></i>
-                        <h4 class="text-sm font-bold text-white uppercase tracking-wider">Distributed Systems</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">Deployment arrays architecture utilizing fault-tolerant synchronization meshes with transaction auditing nodes.</p>
-                    </div>
-                    <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-850 space-y-3">
-                        <i class="fa-solid fa-microchip text-purple-400 text-xl"></i>
-                        <h4 class="text-sm font-bold text-white uppercase tracking-wider">Algorithmic Design</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">Clean code design optimized from algorithmic runtime calculation points, reducing data memory footprints.</p>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="p-6 rounded-xl bg-slate-900/40 border border-slate-850 space-y-3 hover:bg-slate-900 transition-colors">
+                            <i class="fa-solid fa-cubes-blur text-cyan-400 text-xl"></i>
+                            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Front-End Topology</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Isomorphic view layouts utilizing React 19 server configurations, rendering structural layout nodes instantaneously.</p>
+                        </div>
+                        <div class="p-6 rounded-xl bg-slate-900/40 border border-slate-850 space-y-3 hover:bg-slate-900 transition-colors">
+                            <i class="fa-solid fa-database text-blue-400 text-xl"></i>
+                            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Persistent Storage Datastores</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Distributed multi-region key-value state engines optimized for parallel lookup calculations without synchronization blockages.</p>
+                        </div>
+                        <div class="p-6 rounded-xl bg-slate-900/40 border border-slate-850 space-y-3 hover:bg-slate-900 transition-colors">
+                            <i class="fa-solid fa-network-wired text-purple-400 text-xl"></i>
+                            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Edge Orchestration Nodes</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Isolated Cloudflare Workers mapping routes globally across distributed network access lines dynamically.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -326,11 +395,11 @@
                     <div class="w-12 h-1 bg-cyan-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
-                <!-- Structural Grid Mapping Cards Layout System -->
+                <!-- Core Card Display System Layout -->
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <!-- Core Product Node Card 1 -->
-                    <div class="project-card group bg-slate-900 border border-slate-850 rounded-2xl overflow-hidden flex flex-col justify-between">
+                    <!-- Card item node 1 -->
+                    <div class="project-card group bg-slate-900 border border-slate-850 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
                         <div class="p-6 space-y-4">
                             <div class="h-12 w-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20 text-xl">
                                 <i class="fa-solid fa-cubes"></i>
@@ -344,14 +413,13 @@
                                 <span class="text-[9px] font-mono tracking-wider px-2 py-1 rounded bg-slate-950 border border-slate-800 text-slate-400 uppercase">WebSockets</span>
                             </div>
                         </div>
-                        <!-- ACTIVE CTA PORTAL ROUTE FIELD LINK -->
                         <a href="https://github.com" target="_blank" class="block text-center py-4 bg-slate-950 border-t border-slate-850/60 text-[10px] font-bold tracking-widest text-cyan-400 hover:bg-cyan-500 hover:text-slate-950 transition-colors uppercase">
                             Access Workspace Portal <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
                         </a>
                     </div>
 
-                    <!-- Core Product Node Card 2 -->
-                    <div class="project-card group bg-slate-900 border border-slate-850 rounded-2xl overflow-hidden flex flex-col justify-between">
+                    <!-- Card item node 2 -->
+                    <div class="project-card group bg-slate-900 border border-slate-850 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
                         <div class="p-6 space-y-4">
                             <div class="h-12 w-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 border border-blue-500/20 text-xl">
                                 <i class="fa-solid fa-shield-halved"></i>
@@ -370,8 +438,8 @@
                         </a>
                     </div>
 
-                    <!-- Core Product Node Card 3 -->
-                    <div class="project-card group bg-slate-900 border border-slate-850 rounded-2xl overflow-hidden flex flex-col justify-between">
+                    <!-- Card item node 3 -->
+                    <div class="project-card group bg-slate-900 border border-slate-850 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
                         <div class="p-6 space-y-4">
                             <div class="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 border border-purple-500/20 text-xl">
                                 <i class="fa-solid fa-bolt"></i>
@@ -392,12 +460,12 @@
 
                 </div>
 
-                <!-- Invitation Core Call To Action Panel Box -->
-                <div class="mt-20 p-8 sm:p-12 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900 to-indigo-950/30 border border-slate-800 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl">
+                <!-- Call To Action Invitation Panel Row Layout -->
+                <div class="mt-20 p-8 sm:p-12 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900 to-indigo-950/30 border border-slate-800 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
                     <div class="space-y-2 text-center lg:text-left">
                         <h4 class="text-xl font-bold text-white">Let's Build Your Scalability Layer</h4>
                         <p class="text-xs text-slate-400 max-w-2xl">
-                            I partner with specialized operators and technology firms globally to solve computational overhead blockages. Connect with my secure intake interface now.
+                            I partner with selective digital businesses to execute top-tier network optimizations. Connect via our intake routing matrix fields now.
                         </p>
                     </div>
                     <button onclick="navigateTo('contact')" class="whitespace-nowrap px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black text-xs tracking-widest uppercase shadow-md active:scale-95 transition-all cursor-pointer">
@@ -420,26 +488,31 @@
                 </div>
 
                 <div class="grid lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
-                    <!-- Info Meta Interface Display Box Panel -->
-                    <div class="lg:col-span-5 space-y-6">
-                        <h3 class="text-xl font-bold text-white tracking-wide">Direct Verification Matrix</h3>
-                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                            All inbound operational traffic passes validation rules before transmission encryption loops are completed. Expect processing updates within a small operational window.
-                        </p>
+                    <!-- Form Metadata Metrics Listing Panel Info Box -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div class="space-y-3">
+                            <h3 class="text-xl font-bold text-white tracking-wide">Direct Verification Matrix</h3>
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                                All inbound operational connections are logged and filtered securely. Complete the blueprint profile variables to unlock direct developer call scheduling pipelines.
+                            </p>
+                        </div>
                         
+                        <!-- NEW FEATURES: Interactive Form Audit Checkpoints Checklist -->
+                        <div class="space-y-3 border-t border-slate-900 pt-6">
+                            <p class="text-[10px] font-bold text-slate-500 tracking-widest uppercase">Contract Intake Prerequisites</p>
+                            <ul class="space-y-2 text-xs text-slate-400">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-square-check text-cyan-400"></i> Clear architectural functional parameters defined</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-square-check text-cyan-400"></i> Calculated system target delivery deadlines mapping</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-square-check text-cyan-400"></i> Scaled configuration production budget estimates verified</li>
+                            </ul>
+                        </div>
+
                         <div class="space-y-4 text-xs font-semibold tracking-wide">
                             <div class="flex items-center gap-4 p-5 rounded-xl bg-slate-900/60 border border-slate-850">
                                 <i class="fa-solid fa-envelope text-cyan-400 text-xl w-6"></i>
                                 <div>
                                     <p class="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Secure Input Node</p>
                                     <a href="mailto:hello@invictus.com" class="text-slate-200 hover:text-cyan-400 transition-colors">hello@invictus.com</a>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4 p-5 rounded-xl bg-slate-900/60 border border-slate-850">
-                                <i class="fa-solid fa-map-location-dot text-cyan-400 text-xl w-6"></i>
-                                <div>
-                                    <p class="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Base Domain</p>
-                                    <p class="text-slate-200">Remote / Decentralized Deployment</p>
                                 </div>
                             </div>
                         </div>
@@ -475,7 +548,7 @@
                             </button>
                         </form>
                         
-                        <!-- Real-time Form Success Frame Notification Alert Box -->
+                        <!-- Form Success Frame Notification Alert Box Box -->
                         <div id="form-success" class="hidden text-center py-12 space-y-4">
                             <div class="w-14 h-14 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-2xl mx-auto">
                                 <i class="fa-solid fa-circle-nodes"></i>
@@ -491,19 +564,15 @@
 
     </main>
 
-    <!-- 
-      GLOBAL CORPORATE FOOTER BLOCK 
-      Features custom GitHub pipeline links and directly responsive WhatsApp routing paths.
-    -->
-    <footer class="bg-slate-950 border-t border-slate-900 mt-24 py-12">
+    <!-- GLOBAL CORPORATE FOOTER BLOCK -->
+    <footer class="bg-slate-950 border-t border-slate-900/80 mt-24 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-[11px] font-semibold text-slate-500 tracking-wider">
             <div class="text-center md:text-left space-y-1">
                 <p>&copy; 2026 Invictus Engineering. Systems Operational. Architecture Secured.</p>
-                <p class="text-[9px] font-mono text-slate-600 tracking-normal">Hash Validation Check: System_Node_Active_v4.0.0_Pass</p>
+                <p class="text-[9px] font-mono text-slate-600 tracking-normal">Hash Validation Check: System_Node_Active_v4.5.0_Pass</p>
             </div>
             <p class="tracking-widest font-mono text-[10px] text-slate-400 uppercase bg-slate-900 px-3 py-1.5 rounded-md border border-slate-850">Motto: Engineering the Invincible</p>
             
-            <!-- Upgraded Social Interaction Link Matrix Node Channels -->
             <div class="flex gap-6 text-xl">
                 <a href="https://github.com" target="_blank" aria-label="Access GitHub Repository Platform" class="hover:text-white text-slate-400 transition-colors">
                     <i class="fa-brands fa-github"></i>
@@ -515,7 +584,7 @@
         </div>
     </footer>
 
-    <!-- Execution engine controller logic hook connection -->
+    <!-- Execution script connection hook node element line -->
     <script src="script.js"></script>
 </body>
 </html>
