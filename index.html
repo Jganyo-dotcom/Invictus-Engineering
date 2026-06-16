@@ -1,3 +1,341 @@
-<html>
-  
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invictus Engineering | Engineering the Invincible</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Separated Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-900">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="navigateTo('home')">
+                    <div class="h-10 w-10 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-xl font-black text-white shadow-lg shadow-cyan-500/20">
+                        I
+                    </div>
+                    <span class="text-xl font-bold tracking-wider bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+                        INVICTUS <span class="text-cyan-400 font-medium text-sm block -mt-1 tracking-widest">ENGINEERING</span>
+                    </span>
+                </div>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide">
+                    <button onclick="navigateTo('home')" class="nav-link text-cyan-400 hover:text-cyan-400 transition-colors cursor-pointer">HOME</button>
+                    <button onclick="navigateTo('about')" class="nav-link text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer">ABOUT</button>
+                    <button onclick="navigateTo('portfolio')" class="nav-link text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer">WORKS</button>
+                    <button onclick="navigateTo('contact')" class="nav-link text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer">CONTACT US</button>
+                    <button onclick="navigateTo('contact')" class="ml-4 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-xs tracking-wider hover:shadow-lg hover:shadow-cyan-500/20 transition-all active:scale-95 cursor-pointer">
+                        WORK WITH ME
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-slate-400 hover:text-white focus:outline-none p-2 cursor-pointer" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl transition-transform duration-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-slate-900 border-b border-slate-800 px-4 py-6 space-y-4 shadow-xl transform origin-top scale-y-0 transition-transform duration-300">
+            <button onclick="navigateTo('home')" class="block w-full text-left py-2 text-lg text-slate-300 hover:text-cyan-400 font-medium">Home</button>
+            <button onclick="navigateTo('about')" class="block w-full text-left py-2 text-lg text-slate-300 hover:text-cyan-400 font-medium">About</button>
+            <button onclick="navigateTo('portfolio')" class="block w-full text-left py-2 text-lg text-slate-300 hover:text-cyan-400 font-medium">Our Works</button>
+            <button onclick="navigateTo('contact')" class="block w-full text-left py-2 text-lg text-slate-300 hover:text-cyan-400 font-medium">Contact Us</button>
+            <hr class="border-slate-800 my-2">
+            <button onclick="navigateTo('contact')" class="w-full text-center py-3 rounded-xl bg-cyan-500 text-slate-950 font-bold tracking-wider">
+                WORK WITH ME
+            </button>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINERS -->
+    <main class="pt-20 min-h-screen flex flex-col justify-between">
+
+        <!-- ================= HOME PAGE ================= -->
+        <section id="home" class="page-section active max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-32 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold tracking-wider uppercase animate-pulse">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Now Accepting Global Projects
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-none text-white">
+                    Engineering <br>
+                    <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent">The Invincible.</span>
+                </h1>
+                <p class="text-base sm:text-lg text-slate-400 max-w-xl mx-auto md:mx-0 leading-relaxed">
+                    We design, code, and architect digital systems built to endure. Turn your most complex concepts into functional, high-performance web realities.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-4">
+                    <button onclick="navigateTo('portfolio')" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 font-bold text-sm tracking-wider shadow-lg shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer">
+                        Explore Works <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                    <button onclick="navigateTo('contact')" class="px-8 py-4 rounded-xl border border-slate-700 bg-slate-900/50 backdrop-blur font-bold text-sm tracking-wider text-slate-300 hover:border-cyan-500 hover:text-white transition-all cursor-pointer">
+                        Let's Collaborate
+                    </button>
+                </div>
+            </div>
+            
+            <div class="relative flex justify-center items-center">
+                <div class="absolute w-72 h-72 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-full blur-3xl opacity-20"></div>
+                <div class="relative w-full max-w-md p-8 rounded-2xl bg-slate-900/60 border border-slate-800 shadow-2xl backdrop-blur-sm">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex space-x-1.5">
+                            <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                        </div>
+                        <span class="text-xs text-slate-500 font-mono">invictus_core.sys</span>
+                    </div>
+                    <pre class="text-xs sm:text-sm font-mono text-cyan-400 space-y-1 overflow-x-auto"><code><span class="text-purple-400">const</span> project = {
+  motto: <span class="text-amber-300">"Engineering the Invincible"</span>,
+  status: <span class="text-emerald-400">"Flawless"</span>,
+  scalability: <span class="text-emerald-400">Infinity</span>,
+  speed: <span class="text-amber-300">"Blazing Fast"</span>
+};
+
+<span class="text-slate-500">// Ready to build your vision?</span>
+<span class="text-purple-400">export default</span> executeVision(project);</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT SECTION ================= -->
+        <section id="about" class="page-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-2">The Architecture</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Meet the Founder</p>
+                <div class="w-12 h-1 bg-cyan-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+                        <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden flex items-center justify-center">
+                            <img src="YOUR_IMAGE_URL_HERE" alt="Founder" onerror="this.style.display='none'; document.getElementById('avatar-placeholder').style.display='flex';" class="w-full h-full object-cover">
+                            <div id="avatar-placeholder" class="absolute inset-0 flex flex-col items-center justify-center bg-slate-900 text-slate-500 p-6 text-center">
+                                <i class="fa-solid fa-user-astronaut text-5xl text-cyan-500 mb-4"></i>
+                                <span class="text-xs text-slate-400 font-mono">Insert Your Picture Here</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 space-y-6">
+                    <h3 class="text-2xl font-bold text-white">Visionary. Engineer. Builder.</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Welcome to my space. I specialize in developing top-tier web environments that don't just work—they perform impeccably under pressure. Backed by cutting-edge design logic and uncompromising development stacks, I challenge standard limitations.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-4 py-4 border-y border-slate-800">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono">99.9%</p>
+                            <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Uptime Logic</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-black text-blue-400 font-mono">100%</p>
+                            <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Responsive Rate</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-black text-purple-400 font-mono">A+</p>
+                            <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Performance</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="navigateTo('contact')" class="px-6 py-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-500 text-slate-200 hover:text-white transition-all text-sm font-semibold tracking-wide flex items-center gap-2 cursor-pointer">
+                            <i class="fa-solid fa-id-badge text-cyan-400"></i> Read Full Resume & Specs
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= WORKS / PORTFOLIO SECTION ================= -->
+        <section id="portfolio" class="page-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-2">Case Studies</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">The Showcase Matrix</p>
+                <div class="w-12 h-1 bg-cyan-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="project-card group bg-slate-900 border border-slate-800/80 rounded-2xl overflow-hidden flex flex-col justify-between">
+                    <div class="p-6 space-y-4">
+                        <div class="h-12 w-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20 text-xl">
+                            <i class="fa-solid fa-cubes"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">Aether OS Dashboard</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            A next-generation telemetry workspace providing real-time data streaming and instant matrix visualization controls.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-[10px] font-mono tracking-wider px-2 py-1 rounded bg-slate-800 text-slate-400 uppercase">React</span>
+                            <span class="text-[10px] font-mono tracking-wider px-2 py-1 rounded bg-slate-800 text-slate-400 uppercase">WebSockets</span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="block text-center py-4 bg-slate-950 border-t border-slate-800/60 text-xs font-bold tracking-wider text-cyan-400 hover:bg-cyan-500 hover:text-slate-950 transition-colors">
+                        LAUNCH WORKSPACE <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="project-card group bg-slate-900 border border-slate-800/80 rounded-2xl overflow-hidden flex flex-col justify-between">
+                    <div class="p-6 space-y-4">
+                        <div class="h-12 w-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 border border-blue-500/20 text-xl">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">Titanium Protocol</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            An immutable security framework designed to protect decentralized applications against persistent threat vectors.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-[10px] font-mono tracking-wider px-2 py-1 rounded bg-slate-800 text-slate-400 uppercase">Rust</span>
+                            <span class="text-[10px] font-mono tracking-wider px-2 py-1 rounded bg-slate-800 text-slate-400 uppercase">WASM</span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="block text-center py-4 bg-slate-950 border-t border-slate-800/60 text-xs font-bold tracking-wider text-blue-400 hover:bg-blue-500 hover:text-white transition-colors">
+                        LAUNCH WORKSPACE <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="project-card group bg-slate-900 border border-slate-800/80 rounded-2xl overflow-hidden flex flex-col justify-between">
+                    <div class="p-6 space-y-4">
+                        <div class="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 border border-purple-500/20 text-xl">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Quantum API Engine</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            An ultra-low latency gateway router capable of managing billions of operational queries per millisecond flawlessly.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-[10px] font-mono tracking-wider px-2 py-1 rounded bg-slate-800 text-slate-400 uppercase">GoLang</span>
+                            <span class="text-[10px] font-mono tracking-wider px-2 py-1 rounded bg-slate-800 text-slate-400 uppercase">GraphQL</span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="block text-center py-4 bg-slate-950 border-t border-slate-800/60 text-xs font-bold tracking-wider text-purple-400 hover:bg-purple-500 hover:text-white transition-colors">
+                        LAUNCH WORKSPACE <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-16 p-8 rounded-2xl bg-gradient-to-r from-slate-900 to-indigo-950/40 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h4 class="text-lg font-bold text-white">Looking for custom architectural design implementations?</h4>
+                    <p class="text-xs text-slate-400 mt-1 max-w-xl">I take on specialized selective contracts throughout the calendar year. Let's merge engineering prowess with your core concepts.</p>
+                </div>
+                <button onclick="navigateTo('contact')" class="whitespace-nowrap px-6 py-3 rounded-xl bg-cyan-500 text-slate-950 font-bold text-xs tracking-wider uppercase hover:bg-cyan-400 shadow-md transition-all active:scale-95 cursor-pointer">
+                    Initiate Contract <i class="fa-solid fa-handshake ml-1"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT US SECTION ================= -->
+        <section id="contact" class="page-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-2">Secure Line</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Start Your Project</p>
+                <div class="w-12 h-1 bg-cyan-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-12 max-w-5xl mx-auto">
+                <div class="md:col-span-5 space-y-6">
+                    <h3 class="text-xl font-bold text-white">Let's Connect</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Have a design schema or system architecture ready for deployment? Get in touch today for consultation services.
+                    </p>
+                    
+                    <div class="space-y-4 text-sm font-medium">
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-900/50 border border-slate-850">
+                            <i class="fa-solid fa-envelope text-cyan-400 text-lg w-6"></i>
+                            <div>
+                                <p class="text-[10px] text-slate-500 uppercase tracking-widest">Inquire via Email</p>
+                                <a href="mailto:hello@invictus.com" class="text-slate-300 hover:text-cyan-400">hello@invictus.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-900/50 border border-slate-850">
+                            <i class="fa-solid fa-location-dot text-cyan-400 text-lg w-6"></i>
+                            <div>
+                                <p class="text-[10px] text-slate-500 uppercase tracking-widest">Operational Core</p>
+                                <p class="text-slate-300">Remote / Global Deployment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 bg-slate-900/60 border border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xl">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label class="text-xs font-semibold uppercase tracking-wider text-slate-400">Your Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-200 focus:outline-none focus:border-cyan-500 text-sm transition-colors">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-semibold uppercase tracking-wider text-slate-400">Email Address</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-200 focus:outline-none focus:border-cyan-500 text-sm transition-colors">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-semibold uppercase tracking-wider text-slate-400">Project Strategy Matrix</label>
+                            <select class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-400 focus:outline-none focus:border-cyan-500 text-sm transition-colors">
+                                <option>Full-Stack Web Engineering</option>
+                                <option>UI/UX Prototyping Architecture</option>
+                                <option>Consultancy Contract</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-semibold uppercase tracking-wider text-slate-400">Project Brief Details</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-200 focus:outline-none focus:border-cyan-500 text-sm transition-colors resize-none" placeholder="Describe the scope..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 font-bold text-sm text-white tracking-wider hover:opacity-90 active:scale-[0.99] transition-all shadow-lg shadow-cyan-500/10 cursor-pointer">
+                            TRANSMIT INQUIRY <i class="fa-solid fa-paper-plane ml-2 text-xs"></i>
+                        </button>
+                    </form>
+                    <div id="form-success" class="hidden text-center py-8 space-y-3">
+                        <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-xl mx-auto">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Transmission Successful</h4>
+                        <p class="text-xs text-slate-400 max-w-xs mx-auto">Your project guidelines have safely bypassed security vectors.</p>
+                        <button onclick="resetContactForm()" class="text-xs font-semibold tracking-wider text-cyan-400 underline hover:text-cyan-300 pt-2 cursor-pointer">Send Another Message</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER STACK -->
+    <footer class="bg-slate-950 border-t border-slate-900 mt-20 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-slate-500">
+            <p>&copy; 2026 Invictus Engineering. All rights reserved.</p>
+            <p class="tracking-widest font-mono text-[10px] text-slate-600 uppercase">Motto: Engineering the Invincible</p>
+            <!-- Updated Social Footprint Array -->
+            <div class="flex gap-5 text-lg">
+                <a href="https://github.com" target="_blank" aria-label="GitHub Profile" class="hover:text-white transition-colors">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" aria-label="WhatsApp Chat" class="hover:text-emerald-400 transition-colors">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Separated Engine Controls script link -->
+    <script src="script.js"></script>
+</body>
 </html>
